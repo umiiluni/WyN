@@ -7,4 +7,14 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  // Agrega esto para Vercel
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+  },
+  // Esto ayuda con el routing en producción
+  preview: {
+    port: 3000,
+    host: true
+  }
 });

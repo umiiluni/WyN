@@ -1,5 +1,6 @@
-/* Removed Tailwind directives due to unknown at-rule error */
-/* If using Tailwind, ensure your build tool is configured correctly */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
   * {
@@ -94,12 +95,12 @@
 
   @media (max-width: 640px) {
     .text-mobile-lg {
-      font-size: 1.5rem; /* Equivalent to text-2xl in Tailwind */
+      font-size: 1.5rem;
       line-height: 2rem;
     }
 
     .text-mobile-base {
-      font-size: 1rem; /* Equivalent to Tailwind's text-base */
+      font-size: 1rem;
       line-height: 1.5rem;
     }
   }
