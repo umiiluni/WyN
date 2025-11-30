@@ -1,0 +1,113 @@
+/* Removed Tailwind directives due to unknown at-rule error */
+/* If using Tailwind, ensure your build tool is configured correctly */
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+
+  html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #fdf2f8;
+  }
+
+  input,
+  textarea,
+  button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  textarea {
+    font-family: inherit;
+  }
+
+  select {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+  }
+}
+
+@layer components {
+  .safe-area-top {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+
+  .safe-area-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  .safe-area-left {
+    padding-left: max(1rem, env(safe-area-inset-left));
+  }
+
+  .safe-area-right {
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  .touch-safe {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .backdrop-blur-mobile {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  @media (max-width: 640px) {
+    .text-mobile-lg {
+      font-size: 1.5rem; /* Equivalent to text-2xl in Tailwind */
+      line-height: 2rem;
+    }
+
+    .text-mobile-base {
+      font-size: 1rem; /* Equivalent to Tailwind's text-base */
+      line-height: 1.5rem;
+    }
+  }
+}
+
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
