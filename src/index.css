@@ -1,6 +1,8 @@
+/* stylelint-disable at-rule-no-unknown */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+/* stylelint-enable at-rule-no-unknown */
 
 @layer base {
   * {
@@ -21,7 +23,7 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #fdf2f8;
+    /* background-color: #fdf2f8; */ /* Comenta esto - el color viene de Tailwind */
   }
 
   input,
